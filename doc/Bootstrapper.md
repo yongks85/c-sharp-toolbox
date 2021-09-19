@@ -1,17 +1,22 @@
 # Bootstrapper
 
-Quick way to add structure and common application level features to new applications
+Quick way to add structure and common application level features to new applications.
+Base on my personal experience, this portion of the code is always done in hind sight.
+That resulted in messy, hard maintain code on the long term development.
+Refactoring is also seldom done as it is low in Business Value
+<br/>
+While always creating new application, type and referring to the same boiler code for start up gets annoying as well
 
-## Why
-- based on experience
-  - always done in hind sight
-  - require refactoring on long run
-  - clean up low in Biz value
-  - always typeing same boiler code (IoC, argument parser, app level exception handlings.. etc)
-- Want to use IoC with more features
-  - But like the convienence of MS DI extensions provided by other libraries
+## Feature
+- Add DryIoc for Dependency Injection
+    - Allow Microsoft Dependency Injection extensions used by other libraries
+    - Make Module based registration more visible 
+    - Extend for code interception
+- Application level exception handling
+- Argument parser (Future)
+- Multi Assembly scanning for registration (Future)
 
-  ## Examples
+## Examples
   - Sample01
     - Log Interception 
     - Simple MediatR example
