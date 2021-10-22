@@ -10,7 +10,7 @@ namespace Utilities.Tests.Enumeration
         [Fact]
         public void BitFlagTest()
         {
-            var result = EnumAsClass.AsBitFlags<BitFlagSample>(9);
+            var result = Enummeration.AsBitFlags<BitFlagSample>(9);
             result.Should().NotBeEmpty()
                 .And.HaveCount(2)
                 .And.Contain(BitFlagSample.Uninitialized)
@@ -29,7 +29,7 @@ namespace Utilities.Tests.Enumeration
         [Fact]
         public void GetAllTest()
         {
-            EnumAsClass.GetAll<BitFlagSample>()
+            Enummeration.GetAll<BitFlagSample>()
                 .Should().NotBeEmpty()
                 .And.HaveCount(6)
                 .And.OnlyHaveUniqueItems();

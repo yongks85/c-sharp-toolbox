@@ -9,7 +9,7 @@ namespace Utilities.Examples.Enummeration {
     /// Store the different File extension types for easy referencing
     /// To standardize, make sure to add a . in front of the extension
     /// </summary>
-    public class FileExtensions: EnumAsClass {
+    public class FileExtensions: Utilities.Enummeration {
        
         public static FileExtensions Zip => new FileExtensions(1,".zip");
 
@@ -29,9 +29,9 @@ namespace Utilities.Examples.Enummeration {
 
         private FileExtensions(int index, string name) : base(index, name)
         {
-            NoMatchResult = () => throw new NotImplementedException();
-            MultipleResultSameAsNoMatch = true;
-            ExecuteWhenNoMatch = () => throw new NotImplementedException();
+            Default = () => throw new NotImplementedException();
+            //MultipleResultSameAsNoMatch = true;
+            //ExecuteWhenNoMatch = () => throw new NotImplementedException();
         }
 
         private class FileExtWithDefaultName : FileExtensions

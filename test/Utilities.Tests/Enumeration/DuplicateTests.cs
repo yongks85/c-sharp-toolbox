@@ -6,7 +6,7 @@ namespace Utilities.Tests.Enumeration
 {
     public class DuplicateTests
     {
-        internal class Duplicate : EnumAsClass
+        internal class Duplicate : Enummeration
         {
             public static readonly Duplicate DuplicateIndex1 = new Duplicate(1, "Same Index A");
             public static readonly Duplicate DuplicateIndex2 = new Duplicate(1, "Same Index B");
@@ -19,9 +19,9 @@ namespace Utilities.Tests.Enumeration
 
             private Duplicate(int index, string name) : base(index, name)
             {
-                NoMatchResult = () => null;
-                MultipleResultSameAsNoMatch = false;
-                ExecuteWhenNoMatch = null;
+                Default = () => null;
+                //MultipleResultSameAsNoMatch = false;
+                //ExecuteWhenNoMatch = null;
             }
 
             public static implicit operator Duplicate(int index) => FromIndex<Duplicate>(index);

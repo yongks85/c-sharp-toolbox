@@ -1,6 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Utilities.Examples.Enummeration;
 using Xunit;
+using static Utilities.Enummeration;
 
 namespace Utilities.Tests.Enumeration
 {
@@ -40,6 +43,28 @@ namespace Utilities.Tests.Enumeration
             match = BitFlagSample.Ok.Equals(BitFlagSample.UnexpectedError);
             match.Should().Be(false);
 
+        }
+
+        [Fact]
+        public void Testing()
+        {
+            var poop = test.GetAll();
+            poop.Count().Should().Be(2);
+        }
+
+        private class test : EnumAsClass<test>
+        {
+            public static test Test1 = new test("hello");
+            public static test Test2 = new test("hello2");
+
+            private test(string name) : base(name)
+            {
+            }
+
+
+            //private test(int index, string name) : base(index, name)
+            //{
+            //}
         }
     }
 }

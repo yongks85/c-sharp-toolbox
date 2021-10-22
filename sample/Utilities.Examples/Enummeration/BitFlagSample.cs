@@ -2,7 +2,7 @@
 
 namespace Utilities.Examples.Enummeration
 {
-    public class BitFlagSample: EnumAsClass
+    public class BitFlagSample: Utilities.Enummeration
     {
         public static readonly BitFlagSample UnexpectedError = new BitFlagSample(-1, "Unexpected Error has occurred");
         public static readonly BitFlagSample Ok = new BitFlagSample(0, "OK");
@@ -14,7 +14,7 @@ namespace Utilities.Examples.Enummeration
         /// <inheritdoc />
         private BitFlagSample(int index, string name) : base(index, name)
         {
-            NoMatchResult = () => UnexpectedError;
+            Default = () => UnexpectedError;
         }
 
         public static implicit operator BitFlagSample(int index) => FromIndex<BitFlagSample>(index);

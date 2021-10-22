@@ -13,7 +13,7 @@ If I miss some credit to your work or if you wish for it to be removed, please c
 [Favourite Nuget Libraries](/doc/3rdPartyLibraries.md)
 
 ## Features
-- [Enummeration as class (value object)](/doc/EnumAsClass.md)
+- [Enummeration as class (value object)](/doc/EnumAsClass.md) __Archived (Use SmartEnum library)__
 - [Bootstrapper](/doc/Bootstrapper.md)
 - [Assembly Info Extractor](/src/Utilities/AssemblyInfoExtractor.cs)
 - [File extension management using value object](/sample/Utilities.Examples/Enummeration/FileExtensions.cs)

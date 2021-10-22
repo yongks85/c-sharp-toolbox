@@ -12,6 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfoExtractor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConsumerProducer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DisposableObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EnumAsClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enummeration.cs" />
   </ItemGroup>
 </Project>
