@@ -32,8 +32,9 @@ namespace Utilities
 
         public void AddProducer(Func<T> produce)
         {
-            _producers.Add(Task.Factory.StartNew(() => {
-                _channel.Writer.TryWrite(produce()); 
+            _producers.Add(Task.Factory.StartNew(() =>
+            {
+                _channel.Writer.TryWrite(produce());
             }));
 
         }
@@ -42,7 +43,8 @@ namespace Utilities
         {
             for (var i = 0; i < consumers; i++)
             {
-                _consumers.Add(Task.Factory.StartNew(async () => {
+                _consumers.Add(Task.Factory.StartNew(async () =>
+                {
                     while (await _channel.Reader.WaitToReadAsync(_cts.Token))
                         if (_channel.Reader.TryRead(out var data)) consume(data);
                 }));
@@ -63,9 +65,9 @@ namespace Utilities
 
         public void Dispose()
         {
-            _producers.ForEach(p=> p.Dispose());
-            _consumers.ForEach(c=> c.Dispose());
-           _cts.Dispose();
+            _producers.ForEach(p => p.Dispose());
+            _consumers.ForEach(c => c.Dispose());
+            _cts.Dispose();
         }
 
         //public void NotifyComplete(Action complete) => SpinWait.SpinUntil( () => _consumers.TrueForAll(t=> t.IsCompleted))

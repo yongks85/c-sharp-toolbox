@@ -2,13 +2,21 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.0.0" />
-    <PackageReference Include="DryIoc.dll" Version="4.8.1" />
-    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="5.1.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection"/>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bootstrapper.Abstractions\Bootstrapper.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="DryIoc" />
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Include="System.Collections" />
+    <Using Include="Bootstrapper.Abstractions" />
+  </ItemGroup>
 </Project>
