@@ -1,0 +1,52 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <Choose>
+      <!--SDK Project Type-->
+      <When Condition="'$(UsingMicrosoftNETSdk)' == 'true'">
+
+         <!--Common Settings -->
+         <PropertyGroup>
+            <Nullable>disable</Nullable>
+            <NeutralLanguage>en-US</NeutralLanguage>
+            <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+            <LangVersion>latest</LangVersion>
+            <EnableNETAnalyzers>true</EnableNETAnalyzers>
+	         <ImplicitUsings>enable</ImplicitUsings>
+         </PropertyGroup>
+
+         <ItemGroup>
+	         <!-- Utilities Nuget-->
+			 <PackageReference Update="Ardalis.GuardClauses" Version="3.3.0" />
+			 <PackageReference Update="System.Threading.Channels" Version="6.0.0" />
+
+			 <!-- Bootstrapper Nuget-->
+	         <PackageReference Update="Castle.Core.AsyncInterceptor" Version="2.0.0" />
+	         <PackageReference Update="DryIoc.dll" Version="4.8.4" />
+	         <PackageReference Update="DryIoc.Microsoft.DependencyInjection" Version="5.1.0" />
+			 <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+         </ItemGroup>
+
+         <Choose>
+            <!-- Test Projects -->
+            <When Condition="'$(TestProject)' == 'true'">
+               <PropertyGroup>
+                  <Description>Test Assembly</Description>
+               </PropertyGroup>
+
+               <!--Common testing external nuget packages -->
+               <ItemGroup>
+                  <PackageReference Include="FluentAssertions" Version="6.2.0" />
+                  <PackageReference Include="FluentAssertions.Analyzers" Version="0.12.1" />
+                  <PackageReference Include="NSubstitute" Version="4.2.2" />
+                  <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.14" />
+                  <PackageReference Include="xunit" Version="2.4.0" />
+                  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+               </ItemGroup>
+            </When>
+			 <Otherwise>
+
+			 </Otherwise>
+		 </Choose>
+      </When>
+   </Choose>
+</Project>

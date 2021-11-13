@@ -5,5 +5,5 @@ namespace System.Runtime.CompilerServices
     /// This is a workaround to use init property
     /// Ensure the namespace is System.Runtime.CompilerServices
     /// </summary>
-    internal static class IsExternalInit { }
+    public static class IsExternalInit { }
 }

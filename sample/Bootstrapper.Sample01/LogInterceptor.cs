@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using Bootstrapper.Abstractions;
 using Castle.DynamicProxy;
 using Serilog;
 using Serilog.Events;

@@ -4,8 +4,10 @@
 - fluent assertions
 - xunit
 - serilog
-
-- OneOf
-- Ben.Demistifer
 - Aderlis.Guard
+
+# to try
+- OneOf
+- MvvmGen
+- Ben.Demistifer
 - Aderlies.SmartEnum

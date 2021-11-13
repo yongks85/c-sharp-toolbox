@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Bootstrapper.Abstractions;
 using Bootstrapper.Sample.LogIntercept;
 using DryIoc;
 using MediatR;
