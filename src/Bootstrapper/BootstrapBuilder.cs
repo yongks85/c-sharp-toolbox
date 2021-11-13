@@ -15,8 +15,6 @@ internal class BootstrapBuilder : IBootstrapBuilder
     //tODO: command line parser?
     //todo: App configuration (defination file, persitent file name)
 
-    //todo: scanning function for 
-    
     public IBootstrapBuilder WithModulesFromAssembly<T>() where T : IAssemblyMarker
     {
         var modules = typeof(T).Assembly.GetTypes()

@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{30720D8C-2F68-42B9-975B-90C46B19AF65}"
-	ProjectSection(SolutionItems) = preProject
-		doc\3rdPartyLibraries.md = doc\3rdPartyLibraries.md
-		doc\Bootstrapper.md = doc\Bootstrapper.md
-		doc\EnumAsClass.md = doc\EnumAsClass.md
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{92AAA4FB-4F61-4059-BA97-8E5778BD98A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities.Tests", "test\Utilities.Tests\Utilities.Tests.csproj", "{D068797B-3C9B-419B-8DA5-1F943039E7DF}"
@@ -20,6 +12,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bootstrapper", "src\Bootstrapper\Bootstrapper.csproj", "{CD5E2986-6F27-4597-893F-3FCE9EC4D0E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstrap", "Bootstrap", "{DE15E6E7-3E72-41B7-A226-0693ABF9F86A}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Bootstrapper.md = doc\Bootstrapper.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{E9A2F576-74F5-4336-A631-18D1B9BE346E}"
 EndProject
@@ -30,16 +25,23 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities.Extensions", "src\Utilities.Extensions\Utilities.Extensions.csproj", "{CEB05400-0044-4CCE-A775-0671C6B25720}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{4BA1DE06-A46D-4590-BCCC-2819AE169725}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Configuration.md = doc\Configuration.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "src\Configuration\Configuration.csproj", "{557C414B-AA47-462E-ACC1-93DB1B466975}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{2E2D585E-ECDE-490A-97B4-2B55D6749566}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Logging.md = doc\Logging.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "src\Logging\Logging.csproj", "{39BCCEF0-02C9-4C6F-B700-350E4090A353}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05B45B60-ABFB-44D2-AB62-F1D852DA0C9C}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.targets = Directory.Build.targets
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "src\Utilities\Utilities.csproj", "{31C662CD-759A-4AC4-9FB0-F5C15BD65280}"

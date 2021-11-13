@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Bootstrapper\Bootstrapper.csproj" />
+    <ProjectReference Include="..\..\src\Logging\Logging.csproj" />
   </ItemGroup>
 
 </Project>

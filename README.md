@@ -13,13 +13,30 @@ If I miss some credit to your work or if you wish for it to be removed, please c
 [Favourite Nuget Libraries](/doc/3rdPartyLibraries.md)
 
 ## Features
-- [Enummeration as class (value object)](/doc/EnumAsClass.md) __Archived (Use SmartEnum library)__
 - [Bootstrapper](/doc/Bootstrapper.md)
-- [Assembly Info Extractor](/src/Utilities/AssemblyInfoExtractor.cs)
-- [File extension management using value object](/sample/Utilities.Examples/Enummeration/FileExtensions.cs)
+- [Configuration / Settings](/doc/Configuration.md)
+- [Logging Inteception](/doc/Logging.md)
+
+### Utilities
 - Consumer Producer
+- [Assembly Info Extractor](/src/Utilities/AssemblyInfoExtractor.cs)
 
 ## Implicit reference ideas
 - Preferred Folder & Solution layout
-- Using Shared project (*This feature always slipped my mind*)
-- TODO: shared prop file
+- shared target file (Todo: Prop file)
+- Implicit using, central managed nuget versions (See Bootstrapper project)
+
+## 3rd party nuget libraries i like / use
+- Autofac -> DryIoc
+- Fluent assertions
+- xunit
+- serilog
+- Aderlis.Guard
+- NewtonSoft.Json -> System.Text.Json
+
+### Yet to try
+- OneOf
+- MvvmLight -> MvvmGen
+- Ben.Demistifer
+- Aderlies.SmartEnum
+- Spec flow

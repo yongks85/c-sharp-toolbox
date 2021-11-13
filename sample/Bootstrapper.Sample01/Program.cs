@@ -1,8 +1,6 @@
-﻿using System;
-using System.Threading.Tasks;
-using Bootstrapper.Abstractions;
-using Bootstrapper.Sample.LogIntercept;
+﻿using Bootstrapper.Abstractions;
 using DryIoc;
+using Logging;
 using MediatR;
 using Serilog;
 
